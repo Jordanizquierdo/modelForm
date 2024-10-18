@@ -4,8 +4,11 @@ from django.db import models
 
 
 class Proyecto(models.Model):
-    fechaInicio = models.DateField()
-    fechaTermino = models.DateField()
-    nombre = models.DateField(max_length=50)
-    responsable = models.DateField(max_length=50)
-    prioridad = models.IntegerField()
+    # fechaInicio = models.DateField()
+    # fechaTermino = models.DateField()
+    # nombre = models.CharField(max_length=50)
+    responsable = models.CharField(max_length=4)
+    # prioridad = models.IntegerField()
+
+class Alumno(models.Model):
+    nombre = models.CharField(max_length=4)

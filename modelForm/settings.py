@@ -74,13 +74,16 @@ WSGI_APPLICATION = 'modelForm.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_Proyecto_Formulario',
+        'NAME': 'django_proyecto_formulario',
         'USER': 'root',
-        'PASSWORD':''
+        'PASSWORD':'',
+        'OPTIONS': {
+   'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+}
     }
 }
 

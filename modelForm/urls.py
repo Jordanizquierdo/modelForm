@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
     path('proyectos/',views.listadoProyecto),
-    path('agregarProyecto/',views.agregarProyecto)
+    path('agregarProyecto/',views.agregarProyecto),
+    path('eliminarProyect/<int:id>,',views.eliminarProyecto),
+    path('actualizarProyecto/<int:id>',views.actualizarProyecto)
 ]
